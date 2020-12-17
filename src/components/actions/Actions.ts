@@ -85,14 +85,6 @@ class Actions extends PIXI.Sprite {
         gsap.killTweensOf(c);
         this.removeChild(this.arrow);
 
-        // Snickers
-        if (c.name === ResourceList.S11_ACTION_1) {
-            gsap.to(this.bg, {alpha: 0});
-            gsap.to(c, {x: -700, y: c.y+100});
-            gsap.to(c.scale, {x: 2, y: 2});
-            return;
-        } 
-
         // All
         const w = window as any;
         const delay = !!w.chocoDelay ? w.chocoDelay/1000/2 : (1.75);
